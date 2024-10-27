@@ -1,35 +1,49 @@
-# React before after slider component
-Simple slider component for comparing images. Before and after.
+# react-before-after-slider-component
+
+An intuitive React component for creating interactive before-and-after sliders, perfect for comparing images with transformations, such as background removal, retouching, or other edits. Forked from [smeleshkin/react-before-after-slider-component](https://github.com/smeleshkin/react-before-after-slider-component).
+
+### Key Features
+- **Responsive**: Fits both mobile and desktop screens
+- **Customizable**: Adjust dimensions, initial slider position, and styles
+- **Touch-Friendly**: Supports smooth interaction on mobile devices
+- **Ideal for Visual Comparisons**: Show transformations like background removal, image editing, or design changes
 
 [![screencast demo](./screencast.gif)](./screencast.gif)
+
 
 ## Demo
 https://smeleshkin.github.io/react-before-after-slider-component/
 ## Build
+
+```
 npm run build:npm
+```
 ## Basic usage
 ```
 npm install react-before-after-slider-component --save
 ```
 
 Then use it in your app:
-```js
+```javascript
 import React from 'react';
 import ReactBeforeSliderComponent from 'react-before-after-slider-component';
 import 'react-before-after-slider-component/dist/build.css';
 
 const FIRST_IMAGE = {
-  imageUrl: 'https://example.com/.../some-image.jpg'
+  imageUrl: 'https://example.com/path/to/original-image.jpg'
 };
 const SECOND_IMAGE = {
-  imageUrl: 'https://example.com/.../some-image-2.jpg'
+  imageUrl: 'https://example.com/path/to/edited-image.jpg'
 };
-/* ... */
-<ReactBeforeSliderComponent
-    firstImage={FIRST_IMAGE}
-    secondImage={SECOND_IMAGE}
-/>
-/* ... */
+
+function App() {
+  return (
+    <ReactBeforeSliderComponent
+      firstImage={FIRST_IMAGE}
+      secondImage={SECOND_IMAGE}
+    />
+  );
+}
 ```
 ## Props
 
